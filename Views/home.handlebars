@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <a href="/create"><button>Create New Card</button></a>
+    <form class="" action="/search" method="post">
+      <input type="text" name="searchCard" value="">
+      <button>Search Card</button>
+    </form>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Sub Type</th>
+        <th>Mana Cost</th>
+        <th>Action F/Q</th>
+        <th>Cast Range</th>
+        <th>Target/s</th>
+      </tr>
+      {{#card}}
+      <tr>
+        <td><a href="/create?id={{_id}}">{{name}}</a></td>
+        <td>{{type}}</td>
+        <td>{{subType}}</td>
+        <td>{{manaCost}}</td>
+        <td>{{action}}</td>
+        <td>{{castRange}}</td>
+        <td>{{target}}</td>
+        <td><a href="/deleteCard/?id={{_id}}">Delete</a>
+      </tr>
+      {{/card}}
+    </table>
+  </body>
+</html>

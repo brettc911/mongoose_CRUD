@@ -1,0 +1,12 @@
+h1{
+  color: blue;
+}
+
+.cardForm{
+  display: flex;
+  flex-direction: column;
+}
+
+.formField{
+  margin-bottom: 10px;
+}
